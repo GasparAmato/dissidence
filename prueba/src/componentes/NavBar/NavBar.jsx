@@ -6,7 +6,7 @@ const Navbar = (props) => {
             <h1>TIENDA {props.nombreDeLaTienda}</h1>
             <h2>{props.subtitulo}</h2>
             <ul>
-                <li className="perro">categoria 1</li>
+                <li className="cat1">categoria 1</li>
                 <li>categoria 2</li>
                 <li>categoria 3</li>
                 <li>categoria 4</li>
