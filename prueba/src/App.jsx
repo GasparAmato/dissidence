@@ -1,21 +1,20 @@
-
+ import React from 'react';
 import './App.css';
-import Navbar from "./componentes/NavBar/NavBar"
+import Navbar from "./componentes/NavBar/NavBar";
+import Logo from "./assets/img/logo_dissident.jpg";
+
 
 function App() {
-  const darBienvenida = () => alert("bienvenida a nuestra tienda")
+  
 
   return (
     <>
     <div className="App">
-      <Navbar
-      nombreDeLaTienda="Zuko" 
-      subtitulo="store"
-      darBienvenida={darBienvenida}
-      />
+      <Navbar logo={Logo} />
 
-<h1>hola mundo </h1>
-<h2>holaa</h2>
+<h1>Dissident</h1>
+
+
 
     </div>
     </>

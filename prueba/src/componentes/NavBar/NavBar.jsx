@@ -1,19 +1,29 @@
 import React from "react"
 
-const Navbar = (props) => {
-    return (
-        <nav>
-            <h1>TIENDA {props.nombreDeLaTienda}</h1>
-            <h2>{props.subtitulo}</h2>
-            <ul>
-                <li className="cat1">categoria 1</li>
-                <li>categoria 2</li>
-                <li>categoria 3</li>
-                <li>categoria 4</li>
-            </ul>
 
-            <button onClick={props.darBienvenida}>SALUDAME</button>
-        </nav>
+const Navbar = ({logo}) => {
+    return (
+        
+    <nav>
+        
+        <div className="menu">
+            <img className="logo" src={logo} alt="" />
+        
+        <div className="section-opciones">
+        
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About us</a></li>
+<li><a href="#clothes">Clothes</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+  </div>
+  </div>
+  
+    </nav>
+
+    
 
     )
 };
