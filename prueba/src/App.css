@@ -23,7 +23,7 @@
 
 nav{
   background-color: white;
-  border-bottom:solid 1px black;
+  
   
 
   width: 100%;
@@ -45,10 +45,11 @@ nav::after{
 
 .logo{
   width: auto;
-  height:65px;
+  height:55px;
 
   float: left;
-  padding: 8px;
+  padding-left: 20px;
+  
 
  
 }
@@ -56,7 +57,7 @@ nav::after{
 nav ul li{
   list-style: none;
   padding:20px 0;
-  margin-left:55px ;
+  
   float: left;
 }
 nav ul li a{
@@ -65,7 +66,32 @@ nav ul li a{
   font-weight: bold;
 
 }
+nav{
+display: flex;
+justify-content: space-evenly;
+}
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.iconoCarrito{
+width:25px;
+height: auto;
+}
 
 
+.contCart{
+ 
+  background-color: rgb(0, 38, 255);
+  color: white;
+  font-size: 9px;
 
+  border-radius: 200px;
+  padding: 7px 10px 5px 10px;
+
+}
+.containerIconCont{
+  display: flex;
+}
 /* ----------header ends--------- */

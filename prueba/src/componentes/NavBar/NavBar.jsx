@@ -1,7 +1,8 @@
-import React from "react"
+import React from "react";
+import CartWidget from "./CartWidget";
 
 
-const Navbar = ({logo}) => {
+const Navbar = ({logo, imgCarrito}) => {
     return (
         
     <nav>
@@ -11,12 +12,8 @@ const Navbar = ({logo}) => {
         
         <div className="section-opciones">
         
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About us</a></li>
-<li><a href="#clothes">Clothes</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+        <CartWidget imgCarrito={imgCarrito} />
+
 
   </div>
   </div>
