@@ -1,18 +1,18 @@
 import React from 'react'
 
-const itemList = () => {
+const ItemList = () => {
     return(
         
     <div>
         <ul>
-            <li>d</li>
-            <li>i</li>
-            <li>s</li>
-            <li>s</li>
-            <li>i</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </ul>
     </div>
     );
     };
     
-    export default itemList;
+    export default ItemList;

@@ -95,3 +95,30 @@ height: auto;
   display: flex;
 }
 /* ----------header ends--------- */
+/* ----------MAIN---------------- */
+
+/* ITEM COUNT */
+.container-counter{
+   
+  display:flex;
+  justify-content:center;
+
+  color: white;
+  font-weight: 900;
+
+}
+.shown-number{
+  background-color:rgb(223, 222, 222);
+  padding:7px 60px 7px 60px;
+  margin: 0 8px 0 8px;
+}
+.plus-btn{
+  background-color: rgb(236, 198, 43);
+  padding: 7px 12px 5px 12px;
+  border-radius: 200px;
+}
+.min-btn{
+  background-color: rgb(236, 198, 43);
+  padding: 7px 12px 5px 12px;
+  border-radius: 200px;
+}

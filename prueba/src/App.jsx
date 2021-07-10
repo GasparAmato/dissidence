@@ -3,13 +3,14 @@ import './App.css';
 
 import Navbar from "./componentes/NavBar/NavBar";
 import ItemList from "./componentes/Main/itemList";
+import ItemCount from './componentes/Main/itemCount';
 
 import Logo from "./assets/img/logo-dissident.jpg";
 import imgcarrito from "./assets/img/icono_cart.jpg"
 
 
 function App() {
-  
+ 
 
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
 <h1>Dissident</h1>  
       <ItemList />
 
+      <ItemCount initial="1" stock="0" />
 
 
     </div>
