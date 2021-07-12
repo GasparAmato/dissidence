@@ -20,7 +20,7 @@ function App() {
 <h1>Dissident</h1>  
       <ItemList />
 
-      <ItemCount initial="1" stock="0" />
+      <ItemCount initial="1" stock="9" />
 
 
     </div>
