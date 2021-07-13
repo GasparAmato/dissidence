@@ -1,0 +1,34 @@
+[{
+    "id":"1",
+    "name":"",
+    "price": 5000,
+    "img":"../../assets/imgProductos/imagen-producto-1.jpg"
+    },
+    
+    {
+      "id":"2",
+      "name":"",
+      "price": 3200,
+      "img":""
+      },
+      {
+        "id":"3",
+        "name":"",
+        "price": 2200,
+        "img":""
+        },{
+            "id":"4",
+            "name":"",
+            "price": 2200,
+            "img":""
+            },{
+                "id":"5",
+                "name":"",
+                "price": 2200,
+                "img":""
+                },{
+                    "id":"6",
+                    "name":"",
+                    "price": 2200,
+                    "img":""
+                    }]
