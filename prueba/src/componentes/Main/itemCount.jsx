@@ -18,7 +18,6 @@ number > initial && setNumber(number-1)
 <button  onClick={suma} className="plus-btn">+</button>
 <div className="shown-number">{number}</div>
 <button  onClick={resta} className="min-btn">-</button>
-
 </div>
 
 
