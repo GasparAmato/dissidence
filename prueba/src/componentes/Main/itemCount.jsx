@@ -5,10 +5,10 @@ const ItemCount = ({stock, initial}) => {
 const [number, setNumber] = useState(parseInt(initial));
 
 const suma = () => {
-number < stock && setNumber(number+1)
+number <= stock && setNumber(number+1)
 };
 const resta = () => {
-number > initial && setNumber(number-1)
+number >= initial && setNumber(number-1)
 };
 
 
