@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import ItemDetailContainer from "./expandedItems/ItemDetailContainer"
 
 const Item = ({id, name, price, img, colorName, colorStyle}) => {
+    const [montado, setMontado] = useState(false)
+
+
    
-
-
-
+    
     const as = id; 
 
-console.log("hola")
+
 return(
     <>
     {id &&
@@ -17,8 +18,8 @@ return(
         <img src={img} alt="" />
         <div>name:{name}</div>
         <div>price:{price}</div>
-        <button >OPEN</button> 
-         {}
+        <button onClick={setMontado(true)} >OPEN</button> 
+         {montado && <ItemDetailContainer id={id} name={name} price={price} colorName={colorName} colorStyle={colorStyle}/>}
 
         
     </div>
