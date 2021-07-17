@@ -15,7 +15,7 @@ return(
     <div className="card-container">
         
                       <Item/>     
-                      {lil1.map((u) => (<Item id={u.id} name={u.name} img={u.img} price={u.price}/>))}
+                      {lil1.map((u) => (<Item id={u.id} name={u.name} img={u.img} price={u.price} colorName={u.colorName} colorStyle={u.colorStyle}/>))}
                        
       </div>
 </div>

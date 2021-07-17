@@ -15,38 +15,50 @@ const ItemListContainer = () => {
         "id":"one",
         "name":"1",
         "price": 5000,
-        "img":Img1
+        "img":Img1,
+        "colorName":"Beige",
+        "colorStyle":"background-color: rgb(238, 191, 169);" ,
         },
-        
+
         {
           "id":"two",
           "name":"2",
           "price": 3200,
-          "img":Img2
+          "img":Img2,
+          "colorName":"White",
+          "colorStyle":"background-color: white;" ,
           },
           {
             "id":"three",
             "name":"3",
             "price": 2200,
-            "img":Img3
+            "img":Img3,
+            "colorName":"Black",
+            "colorStyle":"" ,
             },{
                 "id":"four",
                 "name":"4",
                 "price": 2200,
-                "img":Img4
+                "img":Img4,
+                "colorName":"Black",
+                "colorStyle":"" 
                 },{
                     "id":"five",
                     "name":"5",
                     "price": 2200,
-                    "img":Img5  
+                    "img":Img5,
+                    "colorName":"White",
+                    "colorStyle":"" 
                     }
                     // ,{
                     //     "id":"6",
                     //     "name":"6",
                     //     "price": 2200,
-                    //     "img":""
+                    //     "img":"",
+                    //     "colorName":"White",
+                    //     "colorStyle":""  
                     //     }
-                    ]
+                    ];
                        
                         
                         const [lista, setLista] = useState([]);
@@ -58,7 +70,7 @@ const ItemListContainer = () => {
                         useEffect(()=> {
                         // eslint-disable-next-line
                         promiseProducts().then((p) => {setLista(p)} )},[]);
-                        promiseProducts().catch(console.log("error"));
+                       
 
                 
                         const lila = lista;

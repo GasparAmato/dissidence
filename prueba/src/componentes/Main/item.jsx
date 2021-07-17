@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import ItemDetailContainer from "./expandedItems/ItemDetailContainer"
 
-const Item = ({id, name, price, img}) => {
-    const as = id;    
+const Item = ({id, name, price, img, colorName, colorStyle}) => {
+   
 
+
+
+    const as = id; 
+
+console.log("hola")
 return(
     <>
     {id &&
@@ -11,6 +17,9 @@ return(
         <img src={img} alt="" />
         <div>name:{name}</div>
         <div>price:{price}</div>
+        <button >OPEN</button> 
+         {}
+
         
     </div>
 </div>}

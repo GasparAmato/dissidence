@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 import Navbar from "./componentes/NavBar/NavBar";
-import ItemCount from './componentes/Main/itemCount';
+// import ItemCount from './componentes/Main/itemCount';
 
 
 import Logo from "./assets/img/logo-dissident.jpg";
@@ -25,7 +25,7 @@ function App() {
 
       
 
-      <ItemCount initial="1" stock="9" />
+      {/* <ItemCount initial="1" stock="9" /> */}
 
 
       
