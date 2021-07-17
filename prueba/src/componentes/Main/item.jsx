@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import ItemDetailContainer from "./expandedItems/ItemDetailContainer"
+import React  from "react";
 
-const Item = ({id, name, price, img, colorName, colorStyle}) => {
-    const [montado, setMontado] = useState(false)
+
+const Item = ({id, name, price, img}) => {
+    
 
 
    
@@ -18,8 +18,8 @@ return(
         <img src={img} alt="" />
         <div>name:{name}</div>
         <div>price:{price}</div>
-        <button onClick={setMontado(true)} >OPEN</button> 
-         {montado && <ItemDetailContainer id={id} name={name} price={price} colorName={colorName} colorStyle={colorStyle}/>}
+         
+        
 
         
     </div>

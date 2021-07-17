@@ -133,16 +133,45 @@ height: auto;
   
 }
 
-
-
-
-.card img{
+.card div img{
   width: 250px;
   height: 385px;
+
+ 
 }
 .card{
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.37);
   margin-bottom: 20px;
+  
+
+  margin-top: 40px;
+}
+
+.card div div {
+  text-decoration:none;
+  color:black;
+  text-align: center;
+
+  
 }
 
 
+/* ITEM DETAILS */
+.container-detail{
+  display: flex;
+  justify-content:center ;
+
+}
+
+.Detail div img{
+  width: 250px;
+  height: 385px;
+
+  margin-top: 15px;
+}
+.Detail{
+  text-align: center;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}

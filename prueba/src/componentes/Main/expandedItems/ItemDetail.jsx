@@ -1,20 +1,27 @@
 import React from "react";
 
-const ItemDetail = ({id, name, price, img,  colorName, colorStyle }) => {
+const ItemDetail = ({id, name, price, img,  colorName, colourStyle }) => {
+
+
     const as = id;
-console.log("chau")    
 
 return(
     <>
+    <div className="container-detail">
     {id &&
-        <div className={[as, "card "].join(' ')} >
+        <div className={[as, "Detail"].join(' ')} >
     <div >
+        
+        
+        
         <img src={img} alt="" />
-        <div>name:{name}</div>
-        <div>price:{price}</div>
-        <div>color:{colorName} <div style={colorStyle} className="circle-colour"></div> </div>   
+        <div>NAME:{name}</div>
+        <div>PRICE:{price}</div>
+        <div>COLOR:{colorName} <div className="circle-colour"></div> </div> 
+        {/* style={`background-color:${colourStyle};`}    */}
     </div>
 </div>}
+</div>
 </>
 )
 }

@@ -58,7 +58,7 @@ const ItemListContainer = () => {
                     //     "colorName":"White",
                     //     "colorStyle":""  
                     //     }
-                    ];
+                    ]
                        
                         
                         const [lista, setLista] = useState([]);
@@ -70,7 +70,7 @@ const ItemListContainer = () => {
                         useEffect(()=> {
                         // eslint-disable-next-line
                         promiseProducts().then((p) => {setLista(p)} )},[]);
-                       
+                        promiseProducts().catch(console.log("error"));
 
                 
                         const lila = lista;
