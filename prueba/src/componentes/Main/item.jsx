@@ -16,8 +16,11 @@ return(
         <div className={[as, "card "].join(' ')} >
     <div>
         <img src={img} alt="" />
-        <div>name:{name}</div>
-        <div>price:{price}</div>
+        <div className="text-item-container">
+            <div className="text-item-one" >${price}</div>
+            <div className="text-item-two">{name}</div>
+        </div>
+        
          
         
 

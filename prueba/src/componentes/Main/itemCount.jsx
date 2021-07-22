@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 
+import Minus from '../../assets/img/minus-btn.jpg'
+import Plus from '../../assets/img/plus-btn.jpg'
+
 const ItemCount = ({stock, initial}) => {
     
 const [number, setNumber] = useState(parseInt(initial));
@@ -14,12 +17,13 @@ number >= initial && setNumber(number-1)
 
 
     return(
+        <div className ="super-container-counter">
         <div className="container-counter">
-<button  onClick={suma} className="plus-btn">+</button>
+<img src={Plus} alt="agregar"  onClick={suma} className="plus-btn"/>
 <div className="shown-number">{number}</div>
-<button  onClick={resta} className="min-btn">-</button>
-</div>
-
+<img src={Minus} alt="quitar" onClick={resta} className="min-btn"/>
+        </div>
+        </div>
 
 
         

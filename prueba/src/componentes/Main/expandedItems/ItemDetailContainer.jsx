@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import { Route } from 'react-router';
+import { Route, useParams } from 'react-router';
 
 import ItemDetail from './ItemDetail';
-import Navbar from '../../NavBar/NavBar';
+
 
 
 import Img1 from '../../../assets/imgProducts/imagen-producto-1.jpg'
@@ -11,58 +11,64 @@ import Img3 from '../../../assets/imgProducts/imagen-producto-3.jpg'
 import Img4 from '../../../assets/imgProducts/imagen-producto-4.jpg'
 import Img5 from '../../../assets/imgProducts/imagen-producto-5.jpg'
 
-import Logo from '../../../assets/img/logo-dissident.jpg';
-import ImgCarrito from '../../../assets/img/icono_cart.jpg';
+
 
 const ItemDetailContainer = () => {
-     const arrayProducts =   [{
+     const arrayProducts =   [
+         {
           "id":"one",
-          "name":"1",
+          "link":"women",
+          "name":"Pijama con capucha - talle unico",
           "price": 5000,
           "img":Img1,
           "colorName":"Beige",
-          "colourStyle":" rgb(238, 191, 169" ,
+          "colourStyle":"beige" ,
           },
   
           {
             "id":"two",
-            "name":"2",
+            "link":"women",
+            "name":"Campera tipo poncho - blanca",
             "price": 3200,
             "img":Img2,
             "colorName":"White",
-            "colourStyle":" white" ,
+            "colourStyle":"white" ,
             },
             {
               "id":"three",
+              "link":"women",
               "name":"3",
               "price": 2200,
               "img":Img3,
               "colorName":"Black",
-              "colourStyle":"" ,
+              "colourStyle":"black" ,
               },{
                   "id":"four",
+                  "link":"women",
                   "name":"4",
                   "price": 2200,
                   "img":Img4,
                   "colorName":"Black",
-                  "colourStyle":"" 
+                  "colourStyle":"black" 
                   },{
                       "id":"five",
+                      "link":"women",
                       "name":"5",
                       "price": 2200,
                       "img":Img5,
                       "colorName":"White",
-                      "colourStyle":"" 
+                      "colourStyle":"white" 
                       }
-                      // ,{
-                      //     "id":"6",
-                      //     "name":"6",
-                      //     "price": 2200,
-                      //     "img":"",
-                      //     "colourName":"White",
-                      //     "colourStyle":""  
-                      //     }
-                      ]
+                      ,{
+                          "id":"6",
+                          "link":"women",
+                          "name":"6",
+                          "price": 2200,
+                          "img":"",
+                          "colourName":"White",
+                          "colourStyle":""  
+                          }
+                      ] 
                          
                           
                           const [lista, setLista] = useState([]);
@@ -74,26 +80,27 @@ const ItemDetailContainer = () => {
                           useEffect(()=> {
                           // eslint-disable-next-line
                           promiseProducts().then((p) => {setLista(p)} )},[]);
-                          promiseProducts().catch(console.log("error"));
+                          
   
-                  
-
+     const { id } = useParams();             
+    console.log(id)
                           
 
 
 return(
 <div>
 
+
 {lista.map((u) => {
                 return(
-<Route key={u.id} exact path={`/clothes/${u.id}`}>
 
-<Navbar logo={Logo} imgCarrito={ImgCarrito}  />             
-<ItemDetail id={u.id} name={u.name} price={u.price} img={u.img} colorName={u.colorName} /> 
-{/*  colourBackground={u.colourStyle} */} 
-</Route>
+<Route key={u.id} exact path={`/${u.link}/${ u.id }`}>
+<ItemDetail id={u.id} name={u.name} price={u.price} img={u.img} colorName={u.colorName} colourStyle={u.colourStyle} link={u.link} /> 
+ </Route>         
+ 
 )})
 }
+
 
 </div>
 )

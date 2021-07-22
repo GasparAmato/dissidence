@@ -2,6 +2,7 @@ import  {useState, useEffect} from 'react'
 import ItemList from './itemList'
 
 
+import LogoWomen from '../../assets/img/logo-women.jpg'
 
 import Img1 from '../../assets/imgProducts/imagen-producto-1.jpg'
 import Img2 from '../../assets/imgProducts/imagen-producto-2.jpg'
@@ -13,7 +14,8 @@ const ItemListContainer = () => {
 
     const arrayProducts =   [{
         "id":"one",
-        "name":"1",
+        "link":"women",
+        "name":"Pijama con capucha ",
         "price": 5000,
         "img":Img1,
         "colorName":"Beige",
@@ -22,7 +24,8 @@ const ItemListContainer = () => {
 
         {
           "id":"two",
-          "name":"2",
+        "link":"women",
+          "name":"Campera tipo poncho",
           "price": 3200,
           "img":Img2,
           "colorName":"White",
@@ -30,21 +33,24 @@ const ItemListContainer = () => {
           },
           {
             "id":"three",
-            "name":"3",
+            "link":"women",
+            "name":"Campera negra large",
             "price": 2200,
             "img":Img3,
             "colorName":"Black",
             "colorStyle":"" ,
             },{
                 "id":"four",
-                "name":"4",
+                "link":"women",
+                "name":"Blazer negro",
                 "price": 2200,
                 "img":Img4,
                 "colorName":"Black",
                 "colorStyle":"" 
                 },{
                     "id":"five",
-                    "name":"5",
+                    "link":"women",
+                    "name":"Vestido blanco",
                     "price": 2200,
                     "img":Img5,
                     "colorName":"White",
@@ -52,6 +58,7 @@ const ItemListContainer = () => {
                     }
                     // ,{
                     //     "id":"6",
+                    // "link":"women",
                     //     "name":"6",
                     //     "price": 2200,
                     //     "img":"",
@@ -70,8 +77,8 @@ const ItemListContainer = () => {
                         useEffect(()=> {
                         // eslint-disable-next-line
                         promiseProducts().then((p) => {setLista(p)} )},[]);
-                        promiseProducts().catch(console.log("error"));
-
+         
+   
                 
                         const lila = lista;
 
@@ -79,10 +86,11 @@ const ItemListContainer = () => {
                         return (
                    
       <div>
+          <div className="subtitle-flex">
+<img className="img-subtitle" src={LogoWomen} alt="" />
+          </div>                  
 <ItemList Lista={lila}/>
-
-
-</div>
+    </div>
                         )
         };                      
     

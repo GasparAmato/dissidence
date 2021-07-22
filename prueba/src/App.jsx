@@ -4,14 +4,17 @@ import {Route, Switch, BrowserRouter} from  "react-router-dom"
  
 
 import Navbar from "./componentes/NavBar/NavBar";
-// import ItemCount from './componentes/Main/itemCount';
+
 
 
 import Logo from "./assets/img/logo-dissident.jpg";
 import imgcarrito from "./assets/img/icono_cart.jpg"
 
 import ItemListContainer from './componentes/Main/itemListContainer'
+import ItemListContainerMen from './componentes/Main/itemListContainerMen';
 import ItemDetailContainer from './componentes/Main/expandedItems/ItemDetailContainer';
+import AboutUs from './componentes/AboutUs/AboutUs';
+import Carrousel from './componentes/Main/carrusel/carrousel'
 
 
 
@@ -22,15 +25,30 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Navbar logo={Logo} imgCarrito={imgcarrito}  />
     <Switch>
-
+      
       <Route exact path="/">
-        <Navbar logo={Logo} imgCarrito={imgcarrito}  />
+       <Carrousel/>
+      </Route>
+
+      <Route exact path="/women">
         <ItemListContainer/>
       </Route>
-      <Route>
-    <ItemDetailContainer/>
+      <Route exact path="/men">
+        <ItemListContainerMen/>
       </Route>
+
+      <Route exact path="/AboutUs">
+        <AboutUs/>
+      </Route>
+      
+      <Route path="/:category/:id" >
+    <ItemDetailContainer/>
+     </Route>
+      
+      
+      
 
     </Switch>
     </BrowserRouter>
