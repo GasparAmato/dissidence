@@ -11,6 +11,13 @@ import Img3 from '../../../assets/imgProducts/imagen-producto-3.jpg'
 import Img4 from '../../../assets/imgProducts/imagen-producto-4.jpg'
 import Img5 from '../../../assets/imgProducts/imagen-producto-5.jpg'
 
+import Img6 from '../../../assets/imgProducts/imagen.producto-men-1.jpg'
+import Img7 from '../../../assets/imgProducts/imagen.producto-men-2.jpg'
+import Img8 from '../../../assets/imgProducts/imagen.producto-men-3.jpg'
+import Img9 from '../../../assets/imgProducts/imagen.producto-men-4.jpg'
+import Img10 from '../../../assets/imgProducts/imagen.producto-men-5.jpg'
+import Img11 from '../../../assets/imgProducts/imagen.producto-men-6.jpg'
+
 
 
 const ItemDetailContainer = () => {
@@ -60,14 +67,54 @@ const ItemDetailContainer = () => {
                       "colourStyle":"white" 
                       }
                       ,{
-                          "id":"6",
-                          "link":"women",
-                          "name":"6",
-                          "price": 2200,
-                          "img":"",
+                          "id":"one",
+                          "link":"men",
+                          "name":"1",
+                          "price": 2000,
+                          "img":Img6,
                           "colourName":"White",
                           "colourStyle":""  
-                          }
+                          },{
+                            "id":"two",
+                            "link":"men",
+                            "name":"2",
+                            "price": 2260,
+                            "img":Img7,
+                            "colourName":"White",
+                            "colourStyle":""  
+                            },{
+                                "id":"three",
+                                "link":"men",
+                                "name":"3",
+                                "price": 2400,
+                                "img":Img8,
+                                "colourName":"White",
+                                "colourStyle":""  
+                                },{
+                                    "id":"four",
+                                    "link":"men",
+                                    "name":"4",
+                                    "price": 2500,
+                                    "img":Img9,
+                                    "colourName":"White",
+                                    "colourStyle":""  
+                                    },{
+                                        "id":"five",
+                                        "link":"men",
+                                        "name":"5",
+                                        "price": 2400,
+                                        "img":Img10,
+                                        "colourName":"White",
+                                        "colourStyle":""  
+                                        },{
+                                            "id":"six",
+                                            "link":"men",
+                                            "name":"6",
+                                            "price": 3000,
+                                            "img":Img11,
+                                            "colourName":"White",
+                                            "colourStyle":""  
+                                            }
                       ] 
                          
                           

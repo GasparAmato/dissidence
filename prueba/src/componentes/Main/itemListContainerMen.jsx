@@ -5,11 +5,11 @@ import LogoMen from '../../assets/img/logo-men.jpg'
 
 
 import Img1 from '../../assets/imgProducts/imagen.producto-men-1.jpg'
-import Img2 from '../../assets/imgProducts/imagen-producto-men-2.jpg'
-import Img3 from '../../assets/imgProducts/imagen-producto-men-3.jpg'
-import Img4 from '../../assets/imgProducts/imagen-producto-men-4.jpg'
-import Img5 from '../../assets/imgProducts/imagen-producto-men-5.jpg'
-import Img6 from '../../assets/imgProducts/imagen-producto-men-6.jpg'
+import Img2 from '../../assets/imgProducts/imagen.producto-men-2.jpg'
+import Img3 from '../../assets/imgProducts/imagen.producto-men-3.jpg'
+import Img4 from '../../assets/imgProducts/imagen.producto-men-4.jpg'
+import Img5 from '../../assets/imgProducts/imagen.producto-men-5.jpg'
+import Img6 from '../../assets/imgProducts/imagen.producto-men-6.jpg'
 
 const ItemListContainerMen = () => {
 
