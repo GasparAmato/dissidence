@@ -1,10 +1,43 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import ItemCount from '../itemCount';
 
 import Exit from'../../../assets/img/exit-img.jpg';
 
+
 const ItemDetail = ({id, name, price, img,  colorName, colourStyle, link }) => {
+    
+
+    const [contador, setContador] = useState(0)
+    const [dis, setDis] = useState(true)
+    const [disable, setDisable] = useState(false)
+    const [buttonAble, setButtonAble] = useState(true)
+
+    const [amount, setAmount] = useState(contador)
+
+    useEffect(() => {
+        contador < 1?
+    setButtonAble(true):setButtonAble(false )
+    }, [contador])
+    
+
+    const buy = () => {
+        setDisable(true)
+        setDis(false)
+
+
+        setAmount(contador)
+
+    }
+
+    const changeOrder = () => {
+        setDisable(false)
+        setDis(true)
+    }
+     console.log(contador)
+
+
+    
 
 
     const as = id;
@@ -33,8 +66,26 @@ return(
                 <div className="price">$ {price}</div>
                 <div className="color">COLOR: {colorName}<div className={colourStyle}></div> </div> 
                 <div>Description: </div>
-                <ItemCount stock={10} initial={1} />
-                
+
+                {dis &&
+                <ItemCount setContador={setContador}   stock={10} initial={1} />}
+            <div className="flex-container">    
+                {dis &&
+                <button disabled={buttonAble}  onClick={buy }>Buy </button>}
+            </div>    
+            <div className="flex-container">
+                {disable && 
+                <Link  to= "/cart">
+                <button className="button-buy">Make order</button>
+                </Link>
+                }
+                {disable && 
+                <button onClick={changeOrder}>Change order</button>
+                }
+            </div>    
+                {disable && 
+                <div>purchase: {amount} "{name}" </div>
+                }
 
             </div>
         </div>
@@ -43,7 +94,9 @@ return(
         
         
   
-</div>}
+</div>
+ 
+}
 
 
 </>

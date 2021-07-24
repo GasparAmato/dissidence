@@ -10,15 +10,15 @@ return(
 </Link>
 
 
-<Link to="AboutUs">
+<Link to="/AboutUs">
 <li>About us</li>
 </Link>
 
-<Link to="nav/cart">
+<Link to="/cart">
 <li className="containerIconCont"><img className="iconoCarrito" src={imgCarrito} alt="" /><div className="contCart">0</div></li>
 </Link>
 
-<Link to="nav/contactus" >
+<Link to="/contactus" >
 <li>Contact</li>
 </Link>
 

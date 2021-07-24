@@ -15,6 +15,8 @@ import ItemListContainerMen from './componentes/Main/itemListContainerMen';
 import ItemDetailContainer from './componentes/Main/expandedItems/ItemDetailContainer';
 import AboutUs from './componentes/AboutUs/AboutUs';
 import Carrousel from './componentes/Main/carrusel/carrousel'
+import Cart from './componentes/Cart/Cart';
+
 
 
 
@@ -46,6 +48,12 @@ function App() {
       <Route path="/:category/:id" >
     <ItemDetailContainer/>
      </Route>
+     
+     
+     <Route exact path="/cart">
+        <Cart/>
+      </Route>
+      
       
       
       
