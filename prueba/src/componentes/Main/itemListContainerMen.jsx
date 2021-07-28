@@ -14,7 +14,7 @@ import Img6 from '../../assets/imgProducts/imagen.producto-men-6.jpg'
 const ItemListContainerMen = () => {
 
     const arrayProducts =   [{
-        "id":"one",
+        "id":"six",
         "link":"men",
         "name":"ropa de hombre ",
         "price": 5000,
@@ -24,7 +24,7 @@ const ItemListContainerMen = () => {
         },
 
         {
-          "id":"two",
+          "id":"seven",
         "link":"men",
           "name":"Campera",
           "price": 3200,
@@ -33,7 +33,7 @@ const ItemListContainerMen = () => {
           "colorStyle":"background-color: white;" ,
           },
           {
-            "id":"three",
+            "id":"eight",
             "link":"men",
             "name":"Campera ",
             "price": 2200,
@@ -41,7 +41,7 @@ const ItemListContainerMen = () => {
             "colorName":"Black",
             "colorStyle":"" ,
             },{
-                "id":"four",
+                "id":"nine",
                 "link":"men",
                 "name":"Blazer ",
                 "price": 2200,
@@ -49,7 +49,7 @@ const ItemListContainerMen = () => {
                 "colorName":"Black",
                 "colorStyle":"" 
                 },{
-                    "id":"five",
+                    "id":"ten",
                     "link":"men",
                     "name":"Pantalon",
                     "price": 2200,
@@ -58,8 +58,8 @@ const ItemListContainerMen = () => {
                     "colorStyle":"" 
                     }
                     ,{
-                        "id":"6",
-                        "link":"women",
+                        "id":"eleven",
+                        "link":"men",
                         "name":"6",
                         "price": 2200,
                         "img":Img6,
@@ -70,30 +70,37 @@ const ItemListContainerMen = () => {
                        
                         
                         const [lista, setLista] = useState([]);
+                        const [loading, setLoading] = useState(true)
 
                         const promiseProducts = () =>{
                             return new Promise((resolve)=>{
-                                setTimeout(() => resolve(arrayProducts))
+                                setTimeout(() => {
+                                    resolve(arrayProducts)
+                                    setLoading(false)
+                                }, 2000)
                             }); };
+
                         useEffect(()=> {
                         // eslint-disable-next-line
                         promiseProducts().then((p) => {setLista(p)} )},[]);
          
    
                 
-                        const lila = lista;
+                        
 
-
-                        return (
+  return (
                    
       <div>
           <div className="subtitle-flex">
           <img className="img-subtitle" src={LogoMen} alt="" />
           </div>
-<ItemList Lista={lila}/>
+{loading ? <div>loading</div> : <ItemList Lista={lista}/>  }
+
     </div>
                         )
-        };                      
+        };                  
+        
+        
     
 
 export default ItemListContainerMen;

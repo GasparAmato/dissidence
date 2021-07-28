@@ -1,19 +1,42 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import { Link } from "react-router-dom";
 import ItemCount from '../itemCount';
+import {CartContext} from "../../../context/CartContext";
 
 import Exit from'../../../assets/img/exit-img.jpg';
 
 
 const ItemDetail = ({id, name, price, img,  colorName, colourStyle, link }) => {
-    
 
     const [contador, setContador] = useState(0)
+    const [amount, setAmount] = useState(contador)
+// use Context
+const {addCart, carrito} = useContext(CartContext)
+
+
+
+const handleAdd = () => {
+    addCart({
+        name,
+        id,
+        price,
+        amount : amount
+    })
+    console.log(carrito)
+   
+}
+
+// useContext ends
+
+    
+
+    
+
     const [dis, setDis] = useState(true)
     const [disable, setDisable] = useState(false)
     const [buttonAble, setButtonAble] = useState(true)
 
-    const [amount, setAmount] = useState(contador)
+   
 
     useEffect(() => {
         contador < 1?
@@ -34,7 +57,7 @@ const ItemDetail = ({id, name, price, img,  colorName, colourStyle, link }) => {
         setDisable(false)
         setDis(true)
     }
-     console.log(contador)
+   
 
 
     
@@ -74,14 +97,18 @@ return(
                 <button disabled={buttonAble}  onClick={buy }>Buy </button>}
             </div>    
             <div className="flex-container">
+
+
                 {disable && 
-                <Link  to= "/cart">
-                <button className="button-buy">Make order</button>
-                </Link>
+                // <Link  to= "/cart">
+                <button className="button-buy" onClick={handleAdd} >Make order</button>
+                // </Link>
                 }
+
                 {disable && 
                 <button onClick={changeOrder}>Change order</button>
                 }
+
             </div>    
                 {disable && 
                 <div>purchase: {amount} "{name}" </div>

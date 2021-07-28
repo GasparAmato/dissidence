@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route, Switch, BrowserRouter} from  "react-router-dom"
+import { CartProvider } from './context/CartContext'
  
 
 import Navbar from "./componentes/NavBar/NavBar";
@@ -26,6 +27,10 @@ function App() {
  
 
   return (
+
+
+<CartProvider> 
+
     <BrowserRouter>
     <Navbar logo={Logo} imgCarrito={imgcarrito}  />
     <Switch>
@@ -60,6 +65,9 @@ function App() {
 
     </Switch>
     </BrowserRouter>
+
+
+</CartProvider>
   );
 }
 

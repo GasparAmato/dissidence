@@ -1,14 +1,32 @@
-import React, {createContext, useContext, useState} from 'react'
+import React, {createContext,  useState} from 'react'
 
 
-const CartContext = createContext() 
 
-const useCartContext = () => useContext(CartContext)
-export function ListProvider({children, initial}){
-    const [count, setCount] = useState()
-    setCount(initial)
+export const CartContext = createContext() 
+
+export const CartProvider = ({children}) => {
+
+ const [carrito, setCarrito] = useState([])
+
+
+
+
+
+ 
+ const addCart = (item) => {
+    setCarrito([...carrito.filter( p => p.id !== item.id ), item])
+ }
+
+ const removeFromCart =(id) => {
+     setCarrito([carrito.filter(p => p.id !== id )])
+ }
+ const clearCart = () => {
+     setCarrito([])
+ }
+
+    
 return(
-    <CartContext.Provider value={count}>
+    <CartContext.Provider value={{carrito, addCart}}>
         {children}
     </CartContext.Provider>
 )

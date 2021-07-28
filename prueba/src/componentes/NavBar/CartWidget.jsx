@@ -1,7 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
-const cartWidget = ({imgCarrito}) => {
+const CartWidget = ({imgCarrito}) => {
+
+    const { carrito } = useContext(CartContext)
+    
+
 return(
     
 <ul>
@@ -15,7 +20,7 @@ return(
 </Link>
 
 <Link to="/cart">
-<li className="containerIconCont"><img className="iconoCarrito" src={imgCarrito} alt="" /><div className="contCart">0</div></li>
+<li className="containerIconCont"><img className="iconoCarrito" src={imgCarrito} alt="" /><div className="contCart">{carrito.length}</div></li>
 </Link>
 
 <Link to="/contactus" >
@@ -26,4 +31,4 @@ return(
 );
 };
 
-export default cartWidget;
+export default CartWidget;

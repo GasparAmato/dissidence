@@ -67,7 +67,7 @@ const ItemDetailContainer = () => {
                       "colourStyle":"white" 
                       }
                       ,{
-                          "id":"one",
+                          "id":"six",
                           "link":"men",
                           "name":"1",
                           "price": 2000,
@@ -75,7 +75,7 @@ const ItemDetailContainer = () => {
                           "colourName":"White",
                           "colourStyle":""  
                           },{
-                            "id":"two",
+                            "id":"seven",
                             "link":"men",
                             "name":"2",
                             "price": 2260,
@@ -83,7 +83,7 @@ const ItemDetailContainer = () => {
                             "colourName":"White",
                             "colourStyle":""  
                             },{
-                                "id":"three",
+                                "id":"eight",
                                 "link":"men",
                                 "name":"3",
                                 "price": 2400,
@@ -91,7 +91,7 @@ const ItemDetailContainer = () => {
                                 "colourName":"White",
                                 "colourStyle":""  
                                 },{
-                                    "id":"four",
+                                    "id":"nine",
                                     "link":"men",
                                     "name":"4",
                                     "price": 2500,
@@ -99,7 +99,7 @@ const ItemDetailContainer = () => {
                                     "colourName":"White",
                                     "colourStyle":""  
                                     },{
-                                        "id":"five",
+                                        "id":"ten",
                                         "link":"men",
                                         "name":"5",
                                         "price": 2400,
@@ -107,7 +107,7 @@ const ItemDetailContainer = () => {
                                         "colourName":"White",
                                         "colourStyle":""  
                                         },{
-                                            "id":"six",
+                                            "id":"eleven",
                                             "link":"men",
                                             "name":"6",
                                             "price": 3000,
