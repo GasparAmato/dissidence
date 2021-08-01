@@ -20,7 +20,7 @@ return(
 </Link>
 
 <Link to="/cart">
-<li className="containerIconCont"><img className="iconoCarrito" src={imgCarrito} alt="" /><div className="contCart">{carrito.length}</div></li>
+<li className="containerIconCont"><img className="iconoCarrito" src={imgCarrito} alt="" />   { carrito.length >= 1 &&   <div className="contCart"> {carrito.length} </div>     } </li>
 </Link>
 
 <Link to="/contactus" >

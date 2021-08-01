@@ -337,7 +337,32 @@ width: 25px;
 height: 25px;
 }
 
+/* fin de detail */
+/* --------Cart items-------- */
+.CartItemContainer{
+  display:flex;
+  
 
+  width:95%;
+  margin:  10px 20px 20px 20px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.37);
+
+}
+.CartItemImg{
+  width: 100px ;
+  height: 150px;
+}
+
+.CartItemDataContainer{
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 10px;
+
+}
+
+.CartItemDeleteButton{
+  margin: 3px 10px 0 0;
+}
 
 
   

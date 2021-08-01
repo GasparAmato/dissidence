@@ -20,6 +20,8 @@ const handleAdd = () => {
         name,
         id,
         price,
+        img,
+        link,
         amount : amount
     })
     console.log(carrito)
