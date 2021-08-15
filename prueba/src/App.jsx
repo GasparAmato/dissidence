@@ -17,6 +17,7 @@ import ItemDetailContainer from './componentes/Main/expandedItems/ItemDetailCont
 import AboutUs from './componentes/AboutUs/AboutUs';
 import Carrousel from './componentes/Main/carrusel/carrousel'
 import Cart from './componentes/Cart/Cart';
+import InfoAndPurchase from './componentes/Cart/InfoAndPurchase';
 
 
 
@@ -59,6 +60,9 @@ function App() {
         <Cart/>
       </Route>
       
+      <Route exact path="/info">
+          <InfoAndPurchase/>
+      </Route>
       
       
       

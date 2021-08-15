@@ -74,7 +74,7 @@ return(
         <div className={[as, "Detail"].join(' ')} >
     
     <div className="detail-container-flex">
-        <Link to={`/${link}`}>
+        <Link to={`/${link}`} >
         <img className="exit" src={Exit} alt="salir" />
         </Link>
         
@@ -96,19 +96,19 @@ return(
                 <ItemCount setContador={setContador}   stock={10} initial={1} />}
             <div className="flex-container">    
                 {dis &&
-                <button disabled={buttonAble}  onClick={buy }>Buy </button>}
+                <button disabled={buttonAble} className="btn btn-primary"  onClick={buy }>Buy </button>}
             </div>    
             <div className="flex-container">
 
 
                 {disable && 
                 // <Link  to= "/cart">
-                <button className="button-buy" onClick={handleAdd} >Make order</button>
+                <button className="button-buy btn btn-primary" onClick={handleAdd} >Add to cart</button>
                 // </Link>
                 }
 
                 {disable && 
-                <button onClick={changeOrder}>Change order</button>
+                <button className="btn btn-primary" onClick={changeOrder}>Change order</button>
                 }
 
             </div>    

@@ -14,6 +14,7 @@ const ItemListContainer = () => {
     const ropa = database.collection("ropa")
 
                         useEffect(()=> {
+                             // eslint-disable-next-line 
                         ropa.get().then((query) => setLista(query.docs.map( (u) => u.data()) )) },[]);
 
 

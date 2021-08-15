@@ -14,16 +14,23 @@ const [lista, setLista] = useState([])
 
     const ropa = database.collection("Men")
 
-                        useEffect(()=> {
-                        ropa.get().then((query) => setLista(query.docs.map( (u) => u.data()) )) },[]);
 
-                        console.log(lista)
+                        
+                        
+    useEffect(()=> {
+        
+        
+        ropa.get().then((query) => setLista(query.docs.map( (u) => u.data()) )) 
+        // eslint-disable-next-line 
+    },[]);
+
+                       
          
    
           
 
            
-                        
+                      
 
   return (
                    

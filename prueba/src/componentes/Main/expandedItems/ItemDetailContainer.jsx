@@ -18,13 +18,21 @@ const ItemDetailContainer = () => {
 
     const ropa2 = database.collection("Men")
 
+   
     useEffect(()=> {
     ropa2.get().then((query) => setLista2(query.docs.map( (u) => u.data()) )) 
     ropa.get().then((query) => setLista(query.docs.map( (u) => u.data()) ))  
-    setConjunto([...lista, ...lista2]);  
+     
     console.log(conjunto)
+    // eslint-disable-next-line
 },[]);
-  
+    useEffect(() => {
+setConjunto([...lista, ...lista2]); 
+},[lista, lista2]);
+    
+
+
+
      const { id } = useParams();             
     console.log(id)
                           
@@ -34,7 +42,7 @@ return(
 <div>
 
 
-{lista.map((u) => {
+{conjunto.map((u) => {
                 return(
 
 <Route key={u.id} exact path={`/${u.link}/${ u.id }`}>

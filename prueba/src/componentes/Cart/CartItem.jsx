@@ -18,12 +18,12 @@ const handlerOnClick  = () => {
             <div>
         <div>Name: {name}</div>
         <div>Amount: {amount}</div>
-        <div>Total price:{price * amount}</div>
+        <div>Total price: {price * amount}</div>
 
-        <button onClick={handlerOnClick} className="CartItemDeleteButton">Delete Item</button>
+        <button className="btn btn-primary button-delete" onClick={handlerOnClick} >Delete Item</button>
 
         <Link to={`/${link}/${id}`}>
-        <button>Change Item</button>
+        <button className="btn btn-primary">Change Item</button>
         </Link>
             </div>
         </div>
